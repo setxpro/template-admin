@@ -7,20 +7,19 @@ import { dark } from "./Styles/theme/dark";
 import Template from "./Components/Template";
 
 const App = () => {
+  const [theme, setTheme] = usePersistedState<DefaultTheme>("theme", light);
 
-  const [theme, setTheme] = usePersistedState<DefaultTheme>('theme', light);
-
-  // Alter between the themes 
-  const toggleTheme = () => setTheme(theme.title === 'light' ? dark : light)
+  // Alter between the themes
+  const toggleTheme = () => setTheme(theme.title === "light" ? dark : light);
 
   return (
     <ThemeProvider theme={theme}>
       <Template>
-        <GlobalStyle/>
-        <Layout toggleTheme={toggleTheme}/>
-        </Template>
+        <GlobalStyle />
+        <Layout toggleTheme={toggleTheme} />
+      </Template>
     </ThemeProvider>
   );
-}
+};
 
 export default App;

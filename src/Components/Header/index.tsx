@@ -1,19 +1,46 @@
-import React from 'react';
-import * as C from './styles';
+import { useEffect, useState } from "react";
+import * as C from "./styles";
 
 interface Props {
   toggleTheme: () => void;
 }
 
-const Header = ( { toggleTheme } : Props) => {
+const Header = ({ toggleTheme }: Props) => {
+
+  const [disappearHeader, setDisappearHeader] = useState(false);
+
+  useEffect(() => {
+    const scrollListener = () => {
+      if (window.scrollY > 2) {
+        setDisappearHeader(true);
+      } else {
+        setDisappearHeader(false);
+      }
+    };
+    window.addEventListener("scroll", scrollListener);
+
+    return () => {
+      window.removeEventListener("scroll", scrollListener);
+    };
+  }, []);
+
   return (
-      <C.Container>
-        <C.Blur></C.Blur>
-          <C.AreaNavigate>
-              <button onClick={toggleTheme}>Toggle Theme</button>
-          </C.AreaNavigate>
-      </C.Container>
+    <C.Container>
+      <C.Blur disappearBlur={disappearHeader}></C.Blur>
+      <C.AreaNavigate>
+        <C.LeftArea>
+          <C.BarsIcon />
+          <C.MailIcon />
+          <C.CheckIcon />
+          <C.ChatIcon />
+          <C.CalendarIcon />
+        </C.LeftArea>
+        <C.RightArea>
+          <button onClick={toggleTheme}>Toggle Theme</button>
+        </C.RightArea>
+      </C.AreaNavigate>
+    </C.Container>
   );
-}
+};
 
 export default Header;
