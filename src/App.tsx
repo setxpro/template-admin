@@ -16,7 +16,7 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <Template>
         <GlobalStyle />
-        <Layout toggleTheme={toggleTheme} />
+        <Layout toggleTheme={toggleTheme} theme={theme}/>
       </Template>
     </ThemeProvider>
   );

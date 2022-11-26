@@ -11,10 +11,10 @@ export const Container = styled.div<{openSidebar: boolean}>`
     background: rgba(0, 0, 0, 0.5);
     z-index: 999;
     cursor: pointer;
-    display: ${props => props.openSidebar ? 'none' : 'inline'};
+    display: ${props => props.openSidebar ? 'inline' : 'none'};
 `;
 export const SidebarArea = styled.div<{openSidebar: boolean}>`
-    width: ${props => props.openSidebar ? '0' : '285px'};
+    width: ${props => props.openSidebar ? '285px' : '0'};
     transition: all .8s ease;
     position: fixed;
     left: 0;

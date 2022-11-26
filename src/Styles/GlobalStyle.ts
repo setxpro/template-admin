@@ -15,5 +15,16 @@ export default createGlobalStyle`
     :root {
         --color-cart: #7367F0;
         --color-notify: #EA5455;
+        --color-online: #28C76F;
+    }
+
+    ::-webkit-scrollbar {
+        width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+        background: #AAA;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: #AAA;
     }
 `;

@@ -4,7 +4,20 @@ import { HiBars3 } from 'react-icons/hi2'
 import { AiOutlineMail } from 'react-icons/ai'
 import { BsCheck2Square, BsChatLeft } from 'react-icons/bs'
 import { FiCalendar } from 'react-icons/fi'
+import { MdNightlight, MdLightMode } from 'react-icons/md'
 
+export const DarkIcon = styled(MdNightlight)`
+    color: ${props => props.theme.colors.text};
+    transition: 1s all ease;
+    font-size: 1.5rem;
+    cursor: pointer;
+`;
+export const LightIcon = styled(MdLightMode)`
+    color: ${props => props.theme.colors.text};
+    transition: 1s all ease;
+    font-size: 1.5rem;
+    cursor: pointer;
+`;
 export const MailIcon = styled(AiOutlineMail)`
     color: ${props => props.theme.colors.text};
     transition: 1s all ease;
@@ -13,7 +26,7 @@ export const MailIcon = styled(AiOutlineMail)`
 `;
 export const BarsIcon = styled(HiBars3)`
     color: #999;
-    font-size: 1.5rem;
+    font-size: 2rem;
     cursor: pointer;
 `;
 export const CheckIcon = styled(BsCheck2Square)`
@@ -47,7 +60,6 @@ export const Container = styled.div`
     top: 0;
     right: 0;
 
-   
 `;
 
 export const Blur = styled.div<{disappearBlur: boolean}>`
@@ -82,6 +94,66 @@ export const AreaNavigate = styled.div`
 
 export const LeftArea = styled.div`
     display: flex;
+    align-items: center;
     gap: 1rem;
 `;
-export const RightArea = styled.div``;
+export const RightArea = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+`;
+export const AreaToggleTheme = styled.div`
+   display: flex;
+   align-items: center;
+`;
+export const ContentAvatar = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 3px;
+`;
+export const AreaName = styled.div`
+    h3,h4 {
+        color: ${props => props.theme.colors.text};
+        transition: all 1s ease;
+        text-align: end;
+    }
+
+    h3 {
+        font-size: 1em;
+        font-weight: 500;
+    }
+    h4 {
+        font-size: .8em;
+        font-weight: 500;
+    }
+`;
+
+export const AreaAvatar = styled.div`
+    .area-avatar {
+
+        position: relative;
+
+        img {
+            width: 50px;
+            border-radius: 50%;
+            border: 2px solid #AAA;
+            padding: 2px;
+
+            
+        }
+
+        ::after {
+                content: '';
+                width: 15px;
+                height: 15px;
+                background: var(--color-online);
+                border-radius: 50%;
+
+                position: absolute;
+                right: 5px;
+                bottom: 2px;
+                transition: all 1s ease;
+                border: 2px solid ${props => props.theme.colors.header};
+            }
+    }
+`;

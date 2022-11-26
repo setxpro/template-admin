@@ -6,7 +6,19 @@ const Main: React.FC = () => {
   return (
       <C.Container>
         <C.Content>
-          <h1>Main</h1>
+          <C.Area>
+            <div className='congratulations'></div>
+            <div className='subscribers-gained'></div>
+            <div className='orders-received'></div>
+          </C.Area>
+          <C.Area>
+            <div className='avg-sessions'></div>
+            <div className='support-tracker'></div>
+          </C.Area>
+          <C.Area>
+            
+            <div className='table-clients'></div>
+          </C.Area>
         </C.Content>
       </C.Container>
   );
