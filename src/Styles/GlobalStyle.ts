@@ -10,8 +10,6 @@ export default createGlobalStyle`
     html,body {
         font-size: calc(60% + .8vmin);
         font-family: 'Montserrat', sans-serif;
-
-        background: #171E31;
     }
 
     :root {

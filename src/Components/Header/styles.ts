@@ -11,6 +11,8 @@ export const Container = styled.div`
     left: 0;
     top: 0;
     right: 0;
+
+   
 `;
 
 export const Blur = styled.div`
@@ -30,7 +32,14 @@ export const AreaNavigate = styled.div`
     height: 60px;
     margin: auto;
     z-index: 9999;
-    background: #283046;
+    transition: all 1s ease;
+    background: ${props => props.theme.colors.header};
     border-radius: 1rem;
-    box-shadow: 0px 1px 9px rgba(0,0,0,0.74)
+    box-shadow: 0px 1px 9px rgba(0,0,0,0.74);
+
+    padding: 0 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: end;
 `;

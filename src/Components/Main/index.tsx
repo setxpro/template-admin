@@ -5,7 +5,9 @@ import * as C from './styles';
 const Main: React.FC = () => {
   return (
       <C.Container>
-        <h1>Hello</h1>
+        <C.Content>
+          <h1>Main</h1>
+        </C.Content>
       </C.Container>
   );
 }

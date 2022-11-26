@@ -3,11 +3,13 @@ import Header from '../Header';
 import Main from '../Main';
 import * as C from './styles';
 
-
-const Layout: React.FC = () => {
+interface Props {
+    toggleTheme: () => void;
+}
+const Layout = ({toggleTheme}: Props) => {
   return (
       <C.Container>
-          <Header/>
+          <Header toggleTheme={toggleTheme}/>
           <Main/>
       </C.Container>
   );
