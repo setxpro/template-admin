@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import useSidebar from "../../Hooks/useSidebar";
 import * as C from "./styles";
 
 interface Props {
@@ -7,6 +8,7 @@ interface Props {
 
 const Header = ({ toggleTheme }: Props) => {
 
+  const { wrapperSidebar} = useSidebar()
   const [disappearHeader, setDisappearHeader] = useState(false);
 
   useEffect(() => {
@@ -29,7 +31,7 @@ const Header = ({ toggleTheme }: Props) => {
       <C.Blur disappearBlur={disappearHeader}></C.Blur>
       <C.AreaNavigate>
         <C.LeftArea>
-          <C.BarsIcon />
+          <C.BarsIcon onClick={wrapperSidebar}/>
           <C.MailIcon />
           <C.CheckIcon />
           <C.ChatIcon />
