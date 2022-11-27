@@ -23,12 +23,19 @@ export const Area = styled.div`
         background: ${props => props.theme.colors.sidebar};
     }
     .subscribers-gained {
-        flex:1; 
+        flex:1;
         border-radius: 1rem;
         height: 300px;
-        width: 50%;
         transition: all 1s ease;
-        background: ${props => props.theme.colors.sidebar};
+        background: ${props => props.theme.colors.sidebar}; 
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        /* padding: 2rem 0 0 0; */
+
+        overflow: hidden;
+
     }
     .orders-received {
         flex:1; 
@@ -37,12 +44,13 @@ export const Area = styled.div`
         width: 50%;
         transition: all 1s ease;
         background: ${props => props.theme.colors.sidebar};
+        overflow: hidden;
     }
     .avg-sessions {
         width: 50%;
         border-radius: 1rem;
         flex:2;
-        height: 400px;
+        height: 500px;
         width: 50%;
         transition: all 1s ease;
         background: ${props => props.theme.colors.sidebar};

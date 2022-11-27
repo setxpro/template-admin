@@ -60,6 +60,8 @@ export const Container = styled.div`
     top: 0;
     right: 0;
 
+    z-index: 999;
+
 `;
 
 export const Blur = styled.div<{disappearBlur: boolean}>`
